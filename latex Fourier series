@@ -1,0 +1,215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Short title]{Fourier Series} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Lalitya varma(EP18BTECH11009)\newline Neeshant pandey(EP18BTECH11010)} % Your name
+\institute[IIT Hyderabad] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Indian Institute of Technology \\ % Your institution for the title page
+\medskip
+\textit{Problem 3.5,3.6} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Problem 3.5} % Table of contents slide, comment this block out to remove it
+%\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+%\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+%\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+%\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+\begin{frame}
+\frametitle{Problem 3.5}
+Suppose the square wave in Fig. 1.1 is given
+as input to the filter in Fig. 3.2. Find and plot
+the filter output.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{input 1 (1).png}
+    \caption{fig 1.1}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{fig 3.2}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{input 2.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Solution}
+
+Solution: Using sinusoidal steady state analysis, if the input to the filter is cos(2πnft), the
+output is given by
+\begin{equation}
+|H(n f)|cos{2πn f t + ∠H(n f)}
+\end{equation}
+
+Using the principle of superposition, for the
+input
+\begin{equation}
+\sum_{n=0}^{∞}an cos(2πn f t) + bn(sin 2πn f)
+\end{equation}
+the output will be
+\begin{equation}
+\sum_{n=0}^{∞}an |H(n f)| cos{2πn f t + ∠H(n f)}
++ bn |H(n f)|sin {2πn f t + ∠H(n f)}
+\end{equation}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Output}
+The output of the filter is
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{3.png}
+    \caption{OUTPUT}
+    \label{fig:my_label}
+\end{figure}
+
+
+\end{frame}
+
+%------------------------------------------------
+\section{Second Section}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Problem 3.6}
+3.6)
+Run the program in problem 3.5 by changing
+the for loop to\newline
+for n in range(2):\newline
+Compare this output with the one in Fig. 3.5
+by plotting in the same graph
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{figure n=0 to 2 }
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{for n=2.png}
+    \caption{output after changing the code is same}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{The End}
+
+Thank you!
+    
+\end{frame}
+
+
+\end{document} 
