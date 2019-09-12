@@ -1,0 +1,208 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Short title]{Fourier Transforms} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Lalitya varma(EP18BTECH11009)\newline Neeshant pandey(EP18BTECH11010)} % Your name
+\institute[IIT Hyderabad] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Indian Institute of Technology \\ % Your institution for the title page
+\medskip
+\textit{Problem 2.7,2.8} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Problem 3.5} % Table of contents slide, comment this block out to remove it
+%\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+%\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+%\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+%\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+\begin{frame}
+\frametitle{Fourier Transform}
+The Fourier transform of a signal g(t) is defined
+as
+\begin{equation}
+        G(f) = \int_{-\infinty \propto}^{\infinty \propto} g(t)e^{-2j \pi ft} dt
+\end{equation}
+
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{problem 2.7}
+2.7 If x(t) = \delta(t) in 
+\begin{equation}
+    RC dy/dt + y(t) = x(t)
+\end{equation}, find y(t) using Fourier
+transforms. This is known as the impulse response and is denoted by h(t)
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Solution}
+
+Solution: Fourier transform of Dirac delta function is
+
+\begin{equation}
+    \int_{-\infinty \propto}^{\infinty \propto} \delta(t) dt = 1 ,t = 0\newline
+   
+\end{equation}
+\begin{equation}
+     \delta(t) = 0   , t &\neq 0
+\end{equation}
+\begin{equation}
+\textit{f[x(t)]}=X(2 \pi f) = \int_{-\infty }^{\infty } x(t)e^{-j2 \pi ft}dt
+\end{equation}
+now for $x(t)=\delta(t)$ we get
+
+\begin{equation}
+f[\delta(t)]=\delta(2\pi f)= \int_{-\infty}^{\infty} \delta(t)e^{-j2 \pi ft}dt
+\end{equation}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Solution}
+\begin{equation}
+                = 1.e^{-j2\pi ft} |_{t=0}
+\end{equation}  
+\therefore f[\delta(t)] = 1.1 = 1\newline
+$This is also known as the impulse response and is denoted by h(t).$
+
+\end{frame}
+
+%------------------------------------------------
+\section{Second Section}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Problem 2.8}
+ Solve \newline
+ $RC dy/dt + y(t) = x(t)$\newline for x(t) = cos(2\pi f_0t)
+ $using Fourier
+transforms.$
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Solution}
+x(t) = cos(2\pi f_0 t)\newline
+$cos(2 \pi f_0 t) = [e^{j2\pi f_0t} + e^{-j2 \pi f_0 t}]/2$
+$F[cos(2\pi f_0 t)] = [F[e^{j2\pi f_0t}]+F[e^{j2\pi f_0t}]]/2$
+$X(2\pi f_0) = [2\pi \delta(\omega - \omega_0) + 2\pi \delta(\omega-\omega_0)]/2$
+\therefore $X(\omega)=\pi [\delta(\omega-\omega_0)+\delta(\omega+\omega_0)]$
+
+
+\end{frame}
+
+\begin{frame}{The End}
+
+Thank you!
+    
+\end{frame}
+
+
+\end{document} 
